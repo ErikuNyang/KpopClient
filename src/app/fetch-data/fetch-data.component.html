@@ -1,0 +1,32 @@
+<h1 id="tableLabel">Kpop Singers List</h1>
+
+<p>Welcome to KPOP world!</p>
+
+<p *ngIf="!artists"><em>Loading...</em></p>
+<p *ngIf="!songs"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="artists">
+  <thead>
+    <tr>
+      <th>Artists</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let artist of artists">
+      <td>{{ artist.name }}</td>
+    </tr>    
+  </tbody>
+</table>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="songs">
+  <thead>
+    <tr>
+      <th>Songs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let song of songs">
+      <td>{{ song.title }}</td>
+    </tr>    
+  </tbody>
+</table>
