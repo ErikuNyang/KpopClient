@@ -1,0 +1,35 @@
+<h1>Song List of {{artistSong.name}}</h1>
+
+<table class='table table-striped' aria-labelledby="tableLabel" [hidden]="!artistSong">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Release Date</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let song of artistSong.songList">
+        <td>{{ song.title }}</td>
+        <td>{{ song.release }}</td>
+  
+      </tr>
+    </tbody>
+  </table> 
+
+<br/>
+<button mat-button color="primary" [routerLink]="['/artists']">Back</button>
+
+<!-- <strong>{{artistSong?.songList}}</strong>
+<strong>{{ artistSong.songList }} </strong>>
+Loop through song List
+name of the song, release date
+
+{
+    "id":1,"name":"BTS","songList":
+        [
+            {"id":1,"title":"Butter","artistId":1,"release":"2021-05-21T00:00:00","summary":null,"artist":null},
+            {"id":7,"title":"Dynamite","artistId":1,"release":"2020-08-21T00:00:00","summary":null,"artist":null},
+            {"id":8,"title":"Boy With Luv(Feat. Halsey)","artistId":1,"release":"2019-04-12T00:00:00","summary":null,"artist":null}
+        ]
+} -->

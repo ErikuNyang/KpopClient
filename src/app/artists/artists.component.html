@@ -1,0 +1,21 @@
+<h1>Artists</h1>
+<p>Here's a list of Artists:</p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" [hidden]="!artists">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Debut Date</th>
+  
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let artist of artists">
+      <td><a [routerLink]="['/artistsong', artist.id]">{{ artist.id }}</a></td>
+      <td>{{ artist.name }}</td>
+      <td>{{ artist.dateDebut }}</td>
+
+    </tr>
+  </tbody>
+</table> 
