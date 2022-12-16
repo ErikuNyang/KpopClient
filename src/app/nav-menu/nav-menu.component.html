@@ -6,11 +6,14 @@
       </mat-icon>
     </button>
     <a mat-flat-button color="primary" [routerLink]="['/artists']">
-      Artists Data
+      K-POP Artists List
     </a>
-    <!-- Commented out 'Counter' button
-    <a mat-flat-button color="primary" [routerLink]="['/counter']">
-      Counter
-    </a> -->
+    <span class="separator"></span>
+    <a *ngIf="!isLoggedIn" mat-flat-button color="primary" [routerLink]="['/login']">
+      Log in
+    </a>
+    <a *ngIf="isLoggedIn" mat-flat-button color="primary" (click)="onLogout()">
+      Logout
+    </a>
   </mat-toolbar>
 </header>

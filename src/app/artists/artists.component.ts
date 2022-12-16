@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Artist } from './Artist';
 
 @Component({
-  selector: 'app-countries',
+  selector: 'app-artists',
   templateUrl: './artists.component.html',
   styleUrls: ['./artists.components.css']
 })
@@ -14,7 +14,7 @@ export class ArtistsComponent implements OnInit {
 
   ngOnInit(): void {
     let url = environment.baseUrl + 'api/KpopList/Artists';
-    this.http.get<Artist[]>(url).subscribe((result: Artist[]) => {
+    this.http.get<Artist[]>(url).subscribe(result => {
       this.artists = result;
     });
   }
