@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: "https://localhost:7036/"    // The Port# is from the Server Side
+  //baseUrl: "https://192.168.1.101:7036/"    // The Port# is from the Server Side
 };
 
 /*
